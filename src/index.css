@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #1F2937;
+  background: #1F2937;
+  scroll-behavior: smooth;
+  /* overflow: hidden;  */
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add the lines below */
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-gap: 1.5em;
+      column-count: 2;
+      page-break-inside: avoid;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+    
+  }
+}
+
+
