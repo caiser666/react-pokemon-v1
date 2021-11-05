@@ -9,7 +9,11 @@ function MyList() {
   let sm, md, lg, xl;
   var myPokemonList = getLocalStorage(local.POKEMON);
   let list = [];
-  list = JSON.parse(myPokemonList);
+
+  if (myPokemonList !== null) {
+    list = JSON.parse(myPokemonList);
+  }
+  
   sm = md = lg = xl = 1;
 
   // console.log(list);
